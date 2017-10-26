@@ -29,6 +29,15 @@ background: -webkit-linear-gradient(to right, #8e44ad, #c0392b);  /* Chrome 10-2
 background: linear-gradient(to right, #8e44ad, #c0392b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+.navbar-default .navbar-brand, .navbar-default .navbar-nav > li > a {
+  color: white;
+}
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-nav > li > a:hover {
+  color: white;
+  opacity: 0.75;
+}
+
 .home-callout {
     margin-top: -20px;
     padding-top: 50px;
