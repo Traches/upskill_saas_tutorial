@@ -47,6 +47,11 @@ background: linear-gradient(to right, #8e44ad, #c0392b); /* W3C, IE 10+/ Edge, F
   border: none;
 }
 
+.navbbar-brand {
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+}
+
 // Home Styles
 .home-callout {
     margin-top: -20px;
