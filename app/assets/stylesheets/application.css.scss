@@ -75,3 +75,7 @@ background: linear-gradient(to right, #8e44ad, #c0392b); /* W3C, IE 10+/ Edge, F
     color:white;
 }
 
+// Hide login/logout message on homepage
+.alert-notice {
+  display: none;
+}
