@@ -1,4 +1,7 @@
 class Users::RegistrationsController < Devise::RegistrationsController
+  # Extend default Devise gem behavior so that users signing up with
+  # a pro account (plan ID 2) save with a stripe subscription. 
+  # Otherwise, signup as usual. 
   def create
     super do |resource|
       if params[:plan]
