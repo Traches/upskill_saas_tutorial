@@ -67,7 +67,7 @@ background: linear-gradient(to right, #8e44ad, #c0392b); /* W3C, IE 10+/ Edge, F
     }
 }
 
-// Home Styles
+// Home Page Styles
 .home-callout {
     margin-top: -20px;
     padding-top: 50px;
@@ -75,9 +75,19 @@ background: linear-gradient(to right, #8e44ad, #c0392b); /* W3C, IE 10+/ Edge, F
     color:white;
 }
 
-// Hide login/logout message on homepage
-.alert-notice {
-  display: none;
+// Flash message styles
+// Note - this is for a tutorial. Don't like how the border for this message
+// spans the entire screen, rather than aligning with the bootstrap columns. 
+.alert-notice, .alert-alert {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, .5);
+  margin-top: -14px;
+  color: white;
+}
+.flash-container {
+  position: absolute;
+  width: 100%;
 }
 
 // Signup buttons
