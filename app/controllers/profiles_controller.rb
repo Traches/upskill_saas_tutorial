@@ -1,4 +1,7 @@
 class ProfilesController < ApplicationController
+  # None of this should be available unless you're logged in. 
+  before_action :authenticate_user!
+  before_action :only_current_user
   
   # GET to /users/:user_id/profile/new
   def new
@@ -31,7 +34,7 @@ class ProfilesController < ApplicationController
   # PUT and PATCH requests to /users/:user_id/profile
   def update
     # Retrieve user from the database
-    @user = User.find(id: params[:user_id])
+    @user = User.find(params[:user_id])
     # Assign user profile to an instance variable
     @profile = @user.profile
     # Mass assign edited profile attributes and save. 
@@ -50,5 +53,9 @@ class ProfilesController < ApplicationController
       params.require(:profile).permit(:first_name, :last_name, :avatar, :job_title, :phone_number, :contact_email, :description)
     end
   
-  
+    def only_current_user
+      # Note: this only works with valid user ids. 
+      @user = User.find(params[:user_id])
+      redirect_to(root_path) unless @user == current_user
+    end
 end
