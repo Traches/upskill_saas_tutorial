@@ -6,4 +6,8 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])  
   end
   
+  # GET to /users
+  def index
+    
+  end
 end
