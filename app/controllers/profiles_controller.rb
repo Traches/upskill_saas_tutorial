@@ -16,7 +16,7 @@ class ProfilesController < ApplicationController
     if @profile.save
       flash[:success] = "Profile updated!"
       # TODO: Redirect to profile page, once there is one. 
-      redirect_to root_path
+      redirect_to user_path(params[:user_id])
     else
       # TODO: don't dump the user's inputs if save to database fails. 
       render action: :new
