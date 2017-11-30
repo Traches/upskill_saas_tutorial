@@ -10,3 +10,10 @@ and send card info to stripe.
 * Javascript should send user fields and card token to rails app. Rails app 
 validates user fields. 
 * Once validated, rails will talk to stripe and start the subscription plan. 
+
+User Profiles
+* Each user should have a profile
+* User should see link to new profile form upon signup
+* User should be able to create and view their user profile
+* User profile should have a photo
+* User should be able to view all user profiles
