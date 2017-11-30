@@ -8,6 +8,7 @@ class UsersController < ApplicationController
   
   # GET to /users
   def index
-    
+    # Includes is important. It stops you from querying the database repeatedly. 
+    @users = User.includes(:profile)
   end
 end
